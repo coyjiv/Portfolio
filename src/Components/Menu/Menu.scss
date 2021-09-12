@@ -1,0 +1,19 @@
+.menu{
+  position: fixed;
+  list-style-type: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  right: 117px;
+  top: 119px;
+  text-align: right;
+  & li{
+    padding: 13px 0px 13px 0px;
+  }
+  @media (max-width: 992px) {
+    color: red;
+  }
+  @media (max-width: 480px) {
+    color: green;
+  }
+}
