@@ -3,8 +3,8 @@ import BoldText from "../BoldText/BoldText";
 import styled from "styled-components";
 
 const Intro = (props) => {
-    const Int = styled.section`display:flex;flex-wrap:wrap;height:1080px;background-color:#2D2D2D`;
-    const Container = styled.div`height:1080px;background-image:url(/introbanner.png);mix-blend-mode: screen;`;
+    const Int = styled.section`display:flex;flex-wrap:wrap;height:1080px;background-color:#2D2D2D; max-width:1920px;`;
+    const Container = styled.div`height:1080px;background-image:url(/introbanner.png); background-size:cover; background-repeat:no-repeat;mix-blend-mode: screen;`;
     const Name = styled.div`display:flex;flex-wrap:wrap;height:385px; margin-top:168px; margin-left:105px;`;
     const WhatIDo = styled.div`display:flex;flex-wrap:wrap;flex-direction:column;height:385px; margin-top:168px; margin-left:105px;`;
     return(

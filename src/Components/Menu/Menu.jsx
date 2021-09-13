@@ -3,10 +3,10 @@ import './Menu.scss';
 const Menu = (props) => {
     return(
         <ul className="menu">
-            <li className="header-menu-element">Home</li>
-            <li className="header-menu-element">About Me</li>
-            <li className="header-menu-element">Projects</li>
-            <li className="header-menu-element">Contacts</li>
+            <li className="header-menu-element"><a href="#"> Home</a></li>
+            <li className="header-menu-element"><a href="#"> About Me</a></li>
+            <li className="header-menu-element"><a href="#"> Projects</a></li>
+            <li className="header-menu-element"><a href="#"> Contacts</a></li>
         </ul>
     );
 }

@@ -1,35 +1,13 @@
+.App{
+  position: relative;
+  max-width: 1920px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
 .main{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.videoIntro{
-  background-color: #61dafb;
-  display: flex;
-  height: 880px;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.videoIntro_intro-par{
-  font-size: 50px;
-  text-align: center;
-}
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+  width: 1920px;
+  height: 5000px;
+  overflow: auto;
 }
 
 

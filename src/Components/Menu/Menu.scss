@@ -1,14 +1,18 @@
 .menu{
   position: fixed;
+  z-index: 1;
   list-style-type: none;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  color: #fff;
   right: 117px;
   top: 119px;
   text-align: right;
   & li{
     padding: 13px 0px 13px 0px;
+    & a{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24px;
+      color: #fff;
+      text-decoration: none;
+    }
   }
   @media (max-width: 992px) {
     color: red;
