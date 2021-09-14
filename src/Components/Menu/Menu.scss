@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 1;
   list-style-type: none;
-  right: 117px;
+  right: 85px;
   top: 119px;
   text-align: right;
   & li{
@@ -13,6 +13,16 @@
       color: #fff;
       text-decoration: none;
     }
+  }
+  &::before{
+    content: "";
+    display: block;
+    width: 160px;
+    height: 220px;
+    background-color: black;
+    opacity: 0.2;
+    transform: translateX(-20px) translateY(-10px);
+    position: absolute;
   }
   @media (max-width: 992px) {
     color: red;
