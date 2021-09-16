@@ -1,0 +1,22 @@
+.parent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #B3AFB3;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #3E4F42;
+}
+::-webkit-scrollbar-track{
+    background: #2D2D2D;
+    box-shadow: inset 1.1px -8.2px 20px -21px #7D7D7D;
+}

@@ -8,7 +8,7 @@ const PortfolioCards = (props) => {
     content:"";
     display:block;
     width: 100%;
-    height: 100%;
+    height: 105vw;
     position: absolute;
     background:#000;
     opacity:0.6;
@@ -16,7 +16,7 @@ const PortfolioCards = (props) => {
     }
     `;
     return(
-        <Portfolio>
+        <Portfolio id={props.id}>
             <CardWrapper/>
         </Portfolio>
     )

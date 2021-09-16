@@ -5,7 +5,7 @@ const BoldText = (props) => {
     const Text = styled.p`font-size: ${props.size}px;
   color: ${props.color};font-family: 'Archivo Black', sans-serif; text-transform:uppercase;${props.addRules}`;
     return(
-        <Text>{props.content}</Text>
+        <Text id={props.id==="contacts"? props.id : null}>{props.content}</Text>
     )
 };
 

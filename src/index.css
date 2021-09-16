@@ -47,3 +47,6 @@ table {
   border-spacing: 0;
 }
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat&display=swap');
+html{
+  overflow: auto;
+}

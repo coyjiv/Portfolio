@@ -7,13 +7,11 @@
   text-align: right;
   & li{
     padding: 13px 0px 13px 0px;
-    & a{
-      font-family: 'Montserrat', sans-serif;
-      font-size: 24px;
-      color: #fff;
-      text-decoration: none;
-      cursor: pointer;
-    }
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
   }
   &::before{
     content: "";
