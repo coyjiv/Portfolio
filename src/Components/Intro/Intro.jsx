@@ -11,7 +11,7 @@ const Intro = (props) => {
     height:1080px;
     background-color:#2D2D2D; 
     max-width:1920px;
- 
+    
     `;
     const Container = styled.div`
     height:1080px;
@@ -34,20 +34,7 @@ const Intro = (props) => {
     height:385px; 
     margin-top:168px; 
     margin-left:105px;
-    @media (max-width: 1825px) {
-    margin-left:40px;
-  }
-  @media (max-width : 1600px){
-  background-color:blue;
-  margin-left:30px;
-  
-  } 
-  @media (max-width : 768px){
-  background-color:yellow;
-  } 
-  @media (max-width : 411px){
-  background-color:green;
-  } 
+    
     `;
 
     const fadeIn = (sectionNum)=>{
