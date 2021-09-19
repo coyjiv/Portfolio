@@ -5,6 +5,11 @@
   max-width: 1920px;
   height: 100%;
   overflow: hidden;
+  @media (min-width:1921px) {
+  width: 1920px;
+  margin: 0px auto;
+  background-color: #2D2D2D;
+  }
 }
 .main{
   width: 1920px;
