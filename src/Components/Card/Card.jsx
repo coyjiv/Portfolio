@@ -3,7 +3,7 @@ import styled from "styled-components";
 import BoldText from "../BoldText/BoldText";
 
 const Card = (props) => {
-    const {background,name,color,fsize, addRules, cardRules,info,infoSize} = props;
+    const {background,name,color,fsize, addRules, cardRules,info,infoSize,url} = props;
 
     const Cont = styled.div`
     width:490px;
@@ -18,7 +18,7 @@ const Card = (props) => {
     ${cardRules}
 `;
     const Hidden = styled.p`
-    transform: rotate3d(0, 1, 0, 180deg);
+    
     opacity:0;
     color:#fff;
     font-size:${infoSize}px;
@@ -36,7 +36,7 @@ const Card = (props) => {
         }
     }
     return(
-        <Cont className="test" onMouseOver={toggleClass} onMouseOut={toggleClass}>
+        <Cont className="test" onClick={()=>window.open(`${url}`, '_blank')} onMouseOver={toggleClass} onMouseOut={toggleClass}>
         <Item>
             <BoldText content={name} size={fsize} color={color} addRules={addRules}/>
             <Hidden>{info}</Hidden>
