@@ -14,7 +14,8 @@ const About = (props) => {
                       line-height: 83px;
                       position:absolute;
                       z-index:3;
-                      left:calc(80% - 1000px);
+                      top:300px;
+                      left:calc(70% - 1000px);
                       transform:translateY(200px);
                       "/>
             <img src="/selfie.png" alt="author selfie" className="selfie"></img>
@@ -26,7 +27,7 @@ const About = (props) => {
                       line-height: 83px;
                       position:absolute;
                       z-index:2;
-                      left:calc(80% - 1200px);
+                      left:calc(90% - 1200px);
                       transform:translateY(1200px);
                       text-shadow: 5px 4px 5px rgba(0, 0, 0, 0.2) ;
                       "/>
