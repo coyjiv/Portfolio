@@ -6,7 +6,6 @@ import SomeWorkBanner from "./Components/SomeWorkBanner/SomeWorkBanner";
 import PortfolioCards from "./Components/PortfolioCards/PortfolioCards";
 import About from "./Components/About/About";
 import Footer from "./Components/Footer/Footer";
-import SmoothScroll from "./Components/SmoothScroll/SmoothScroll";
 import BoldText from "./Components/BoldText/BoldText";
 
 const App = (props) => {
@@ -15,7 +14,6 @@ const App = (props) => {
         <>
             <main className="App">
                 <Menu/>
-                <SmoothScroll>
 
                 <Intro id="home"/>
                 <SomeWorkBanner/>
@@ -36,9 +34,9 @@ const App = (props) => {
                         <a href="https://www.linkedin.com/in/shcherbakovfrontend/" className="social-link">LinkedIn</a>
                     </div>
                 </div>
-                </SmoothScroll>
+                <Footer/>
             </main>
-            <Footer/>
+
         </>
     );
 }

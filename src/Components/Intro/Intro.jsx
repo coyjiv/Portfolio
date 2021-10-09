@@ -91,10 +91,9 @@ const Intro = (props) => {
     `;
 
     const fadeIn = (sectionNum)=>{
-        console.log(this)
         anime.timeline({loop: false})
             .add({
-                targets: `section:nth-child(${sectionNum}) div>p`,
+                targets: `p`,
                 rotateY: [0,-30, 0],
                 duration: 3000,
                 delay: 0,
