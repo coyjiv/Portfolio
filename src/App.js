@@ -41,7 +41,7 @@ const App = () => {
         }
         return
     }
-    useEffect(()=>skewScrolling(),[])
+    useEffect(()=>skewScrolling(),[skewScrolling])
     return (
         <>
             <ScApp ref={app}>
