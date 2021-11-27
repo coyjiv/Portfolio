@@ -26,6 +26,7 @@ const Intro = (props) => {
   } 
   @media (max-width : 414px){
   height:811px;
+  //background-color:red;
   } 
     `;
     const Container = styled.div`
@@ -59,6 +60,9 @@ const Intro = (props) => {
         }
         @media (max-width : 540px){
         align-content:flex-start;
+        }
+        @media (max-width : 414px){
+        margin-top:115px;
         }
     `;
     const WhatIDo = styled.div`
@@ -122,6 +126,7 @@ const Intro = (props) => {
         }
         @media (max-width : 414px){
   font-size:90px;
+  margin-top:0px
   }
         "/>
         <BoldText content="shcherbakov" size="180" color="#E4E4E4" addRules="
@@ -160,7 +165,7 @@ const Intro = (props) => {
                 @media (max-width : 414px){
                 font-size:30px;
                 width:400px;
-                margin-top:30px;
+                margin-top:0px;
                 padding-left:30px;
                 }
                 "/>
@@ -191,15 +196,8 @@ const Intro = (props) => {
         margin-left:20px;
         }
         @media (max-width : 540px){
-        position:absolute;
-        top:5%;
-        font-size:60px;
+        display:none
         }
-        @media (max-width : 414px){
-  font-size:40px;
-  width:400px;
-  margin-left:50px;
-  }
                 "/>
             </WhatIDo>
         </Container>

@@ -1,44 +1,61 @@
 import './App.scss';
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import Menu from "./Components/Menu/Menu";
 import Intro from "./Components/Intro/Intro";
 import SomeWorkBanner from "./Components/SomeWorkBanner/SomeWorkBanner";
 import PortfolioCards from "./Components/PortfolioCards/PortfolioCards";
 import About from "./Components/About/About";
 import Footer from "./Components/Footer/Footer";
-import BoldText from "./Components/BoldText/BoldText";
+import {ScApp, ScAppContainer} from "./styled";
+import {useWindowSize} from "./hooks/index";
 
-const App = (props) => {
+const App = () => {
+    const size = useWindowSize();
+    const app = useRef()
+    const scrollContainer = useRef()
 
-    return(
+    useEffect(() => {
+        document.body.style.height = `${scrollContainer.current.getBoundingClientRect().height}px`
+    }, [size.height])
+
+    const skewConfig = {
+        ease: .1,
+        current: 0,
+        previous: 0,
+        rounded: 0,
+    }
+
+    const skewScrolling = () => {
+        if (scrollContainer != null){
+            skewConfig.current = window.scrollY;
+            skewConfig.previous += (skewConfig.current - skewConfig.previous) * skewConfig.ease;
+            skewConfig.rounded = Math.round(skewConfig.previous * 100) / 100;
+
+            const difference = skewConfig.current - skewConfig.rounded;
+            const acceleration = difference / size.width;
+            const velocity = +acceleration;
+            const skew = velocity * 7.5;
+
+            scrollContainer.current.style.transform = `translate3d(0, -${skewConfig.rounded}px, 0) skewY(${skew}deg)`
+            requestAnimationFrame(() => skewScrolling())
+        }
+        return
+    }
+    useEffect(()=>skewScrolling(),[])
+    return (
         <>
-            <main className="App">
-                <Menu/>
-
-                <Intro id="home"/>
-                <SomeWorkBanner/>
-                <PortfolioCards id="portfolio"/>
-                <About id="about"/>
-                <BoldText id="contacts" size="100" color="#E4E4E4" addRules="position:absolute; top:calc(100% - 730px); left:calc(7% - 40px);" content="contacts"/>
-                <div className="social-wrapper">
-                    <div className="social-wrapper-item">
-                        <img src="/soc-icons/gmail.svg" width="27" alt="" className="social-icon"/>
-                        <a href="mailto:djdaniil46@gmail.com" className="social-link">Email</a>
-                    </div>
-                    <div className="social-wrapper-item">
-                        <img src="/soc-icons/telegram.svg" width="27" alt="" className="social-icon"/>
-                        <a href="https://t.me/kuawq" className="social-link">Telegram</a>
-                    </div>
-                    <div className="social-wrapper-item">
-                        <img src="/soc-icons/linkedin.svg" width="27" alt="" className="social-icon"/>
-                        <a href="https://www.linkedin.com/in/shcherbakovfrontend/" className="social-link">LinkedIn</a>
-                    </div>
-                </div>
-                <Footer/>
-            </main>
-
+            <ScApp ref={app}>
+                <ScAppContainer ref={scrollContainer}>
+                    <Menu/>
+                    <Intro id="home"/>
+                    <SomeWorkBanner/>
+                    <PortfolioCards id="portfolio"/>
+                    <About id="about"/>
+                    <Footer/>
+                </ScAppContainer>
+            </ScApp>
         </>
-    );
+    )
 }
 
 export default App;

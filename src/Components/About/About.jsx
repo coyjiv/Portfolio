@@ -31,7 +31,23 @@ const About = (props) => {
                       transform:translateY(1200px);
                       text-shadow: 5px 4px 5px rgba(0, 0, 0, 0.2) ;
                       "/>
+            <BoldText id="contacts" size="100" color="#E4E4E4" addRules="position:absolute; top:calc(100% - 730px); left:calc(7% - 40px);" content="contacts"/>
+            <div className="social-wrapper">
+                <div className="social-wrapper-item">
+                    <img src="/soc-icons/gmail.svg" width="27" alt="" className="social-icon"/>
+                    <a href="mailto:djdaniil46@gmail.com" className="social-link">Email</a>
+                </div>
+                <div className="social-wrapper-item">
+                    <img src="/soc-icons/telegram.svg" width="27" alt="" className="social-icon"/>
+                    <a href="https://t.me/kuawq" className="social-link">Telegram</a>
+                </div>
+                <div className="social-wrapper-item">
+                    <img src="/soc-icons/linkedin.svg" width="27" alt="" className="social-icon"/>
+                    <a href="https://www.linkedin.com/in/shcherbakovfrontend/" className="social-link">LinkedIn</a>
+                </div>
+            </div>
         </section>
+
     )
 };
 
