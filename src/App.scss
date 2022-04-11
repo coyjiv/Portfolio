@@ -1,47 +1,46 @@
-.App{
-  position: relative;
-  top: 0;
-  left: 0;
-  max-width: 1920px;
+.App {
   height: 100%;
   overflow: hidden;
-  @media (min-width:1921px) {
-  width: 1920px;
-  margin: 0px auto;
-  background-color: #2D2D2D;
+  @media (min-width: 1921px) {
+    width: 1920px;
+    margin: 0px auto;
+    background-color: #2d2d2d;
   }
 }
-.main{
+.main {
   width: 1920px;
   height: 5000px;
   overflow: auto;
 }
-
-.cardAnim{
-    transform: rotate3d(0, 1, 0, 180deg);
-  & p{
+.container {
+  max-width: 1920px;
+  position: relative;
+  margin: 0px auto;
+}
+.cardAnim {
+  transform: rotate3d(0, 1, 0, 180deg);
+  & p {
     opacity: 1;
   }
 }
-.social-wrapper{
+.social-wrapper {
   position: absolute;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  bottom: 410px;
+  top: calc(100% - 50vw);
   left: 70px;
   gap: 24px;
   z-index: 4;
-  & .social-wrapper-item a{
-  font-family: 'Archivo Black', sans-serif;
-  text-transform:uppercase;
+  & .social-wrapper-item a {
+    font-family: "Archivo Black", sans-serif;
+    text-transform: uppercase;
     text-decoration: none;
-    font-size: 40px;
-  color: #FFF;
+    font-size: 3vw;
+    color: #fff;
   }
-  & .social-wrapper-item img{
+  & .social-wrapper-item img {
     padding-right: 20px;
     border-radius: 25px;
   }
-
 }

@@ -1,10 +1,10 @@
-.about{
+.about {
   display: block;
   width: 100%;
-  height: 2800px;
+  height: 200vw;
   padding: 50px 60px;
   position: relative;
-  &:after{
+  &:after {
     content: "";
     display: block;
     width: 100%;
@@ -19,32 +19,31 @@
   }
 }
 @keyframes rotate {
-  0%{
+  0% {
     opacity: 0;
     display: block;
     position: absolute;
-    transform: rotate(30deg)scale(0.6);
+    transform: rotate(30deg) scale(0.6);
   }
-  40%{
+  40% {
     opacity: 1;
     transform: rotate(160deg);
   }
-  100%{
+  100% {
     opacity: 0;
     transform: rotate(160deg);
   }
 }
-.selfie{
-  display: block;
+.selfie {
+  width: 27%;
   position: absolute;
-  z-index: 2;
-  transform: translateY(500px)scale(0.7);
+  transform: translateY(50px);
 }
-.hud{
+.hud {
   mix-blend-mode: lighten;
   right: 66px;
   top: 1000px;
   position: absolute;
   z-index: 1;
-  animation: rotate 7s ease-in-out  infinite alternate;
+  animation: rotate 7s ease-in-out infinite alternate;
 }
