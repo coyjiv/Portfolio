@@ -1,6 +1,7 @@
 import React from "react";
 import { Cont, Item, Hidden } from "./styled";
 import BoldText from "../BoldText/BoldText";
+import { ScCardContainer, ScCardItem, ScCardHiddenText } from "./styled";
 
 const Card = (props) => {
   const {

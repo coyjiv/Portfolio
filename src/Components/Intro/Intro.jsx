@@ -146,7 +146,7 @@ const Intro = (props) => {
                 @media (max-width : 414px){
                 font-size:30px;
                 width:400px;
-                margin-top:30px;
+                margin-top:0px;
                 padding-left:30px;
                 }
                 "
@@ -187,9 +187,7 @@ const Intro = (props) => {
         margin-left:20px;
         }
         @media (max-width : 540px){
-        position:absolute;
-        top:5%;
-        font-size:60px;
+        display:none
         }
         @media (max-width : 414px){
   font-size:40px;

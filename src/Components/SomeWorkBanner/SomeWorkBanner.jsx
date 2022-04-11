@@ -2,6 +2,11 @@ import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import BoldText from "../BoldText/BoldText";
 import hoverEffect from "hover-effect";
+import {
+  ScSomeworkBannerContainer,
+  ScImageWrapper,
+  ScBannerInfo,
+} from "./styled";
 
 const SomeWorkBanner = (props) => {
   const Cont = styled.section`
